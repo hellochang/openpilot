@@ -44,6 +44,9 @@ class Pc(HardwareBase):
   def get_network_strength(self, network_type):
     return NetworkStrength.unknown
 
+  def get_network_metered(self, network_type) -> bool:
+    return False  # PC implementation always returns False for metered networks
+
   def get_current_power_draw(self):
     return 0
 
